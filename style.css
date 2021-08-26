@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo{
+    margin: 0 10px;
+}
+.navbar ul{
+    display:flex;
+    list-style: none;
+}
+.navbar ul li{
+    margin: 0 40px;
+}
+.navbar ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+.navbar ul li::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: red;
+    display:block;
+    margin: auto;
+    transition: 0.7s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.nav-media ul{
+    display:flex;
+    list-style: none;
+    float: right;
+}
+.nav-media ul li{
+    margin: 0 20px;
+}
+.nav-media ul li .fa {
+    color: #000000;
+    font-size: 20px;
+    line-height: 50px;
+    transition: .5s;
+}
+.nav-media ul li .fa:hover {
+    color: #ffffff;
+}
+.nav-media ul li a {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.7s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.nav-media ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.nav-media ul li:nth-child(2) a:hover {
+    background-color: #3b5999;
+}
+.nav-media ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.nav-media ul li:nth-child(4) a:hover {
+    background-color: red;
+}
+.nav-media ul li:nth-child(5) a:hover {
+    background-color: #0077B5;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    padding: 0 10;
+    cursor:pointer;
+    display: none;
+   
+}
+#check{
+    display: none;
+}
+.midtext{
+    color:white;
+    font-size: 50px;
+    text-align: center;
+    padding: 250;
+}
+.middle{
+    background-color: black;
+    width: 100%;
+    height: 10%;
+}
+.left-part{
+    color:#EE4B2B;
+    text-align: left;
+}
+.left-part ul li {
+    letter-spacing: 280;
+    display: inline-block;
+    list-style: none;
+    margin: 10 20;
+    padding: 2 4;
+}
+.left-part ul li .fa {
+    font-size: 80px;
+}
+.endpart{
+    background-color: black;
+    width: 100%;
+    height: 500%;
+}
+.googlemap{
+    position: relative;
+    padding:700 0;
+    margin: 0px;
+}
+.text123{
+    color:white;
+    font-size: 25px;
+}
+.endlogo{
+    top:-55;
+    position: relative;
+    text-align: center;
+    margin: 0px;
+}
+.endsocial-menu ul{
+    position: relative;
+    display: inline-flex;
+    
+}
+.endsocial-menu ul li{
+    list-style: none;
+    margin: 100 10px;
+    padding: 2 4;
+}
+.endsocial-menu ul li .fa {
+    color:black;
+    font-size: 20px;
+    line-height: 50px;
+    transition: .5s;
+}
+.endsocial-menu ul li .fa:hover {
+    color:white;
+}
+.endsocial-menu ul li a {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.endsocial-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.endsocial-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.endsocial-menu ul li:nth-child(2) a:hover {
+    background-color: #e4405f;
+}
+.endsocial-menu ul li:nth-child(3) a:hover {
+    background-color: #cd201f;
+}
+.endsocial-menu ul li:nth-child(4) a:hover {
+    background-color: #0077B5;
+}
+@media (max-width: 940px){
+    .checkbtn{
+        display: block;
+        padding: 0 100;
+    }
+    .logo{
+        width: 120%;
+    }
+    .navbar ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        background:#2c3e50;
+        text-align: center;
+        display: block;
+        transition: all .5s;
+    }
+    .navbar ul li{
+        margin: 40px 0;
+    }
+    .navbar ul li a{
+        font-size: 20px;
+        display: block;
+    }
+    .navbar ul li::after{
+        content: "";
+        width: 0%;
+        height: 4px;
+        background:red;
+        display:block;
+        margin: auto;
+        transition: 0.3s;
+    }
+    .navbar ul li:hover::after{
+        width: 100%;
+    }
+    .nav-media ul{
+        position: fixed;
+        top:90%;
+        left: -100%;
+        background:#2c3e50;
+        height: 100vh;
+        width: 100%;
+        transition: all .5s;
+    }
+    .nav-media ul li{
+        margin: 0 10px 15px 33;
+    }
+    #check:checked ~ .navbar ul{
+        left: 0;
+    } 
+    #check:checked ~ .nav-media ul{
+        left: 0;
+    }
+    #check:checked ~ .checkbtn i:before{
+        content: "\f00d";
+    }
+    .midtext{
+        font-size: 29px;
+        padding: 220 60;
+    }
+    .googlemap{
+        position: relative;
+        margin: 0 0 ;
+    }
+    .endlogo{
+
+        text-align: center;
+    }
+    .text123{
+        font-size: 20px;
+    }
+    .endsocial-menu{
+    
+        padding: 30;
+        margin:2 4;
+    }
+}
+@media (max-width: 384px){
+    .checkbtn{
+        display: block;
+        padding: 0 100;
+    }
+    .logo{
+        width: 120%;
+    }
+    .navbar ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        background:#2c3e50;
+        text-align: center;
+        display: block;
+        transition: all .5s;
+    }
+    .navbar ul li{
+        margin: 40px 0;
+    }
+    .navbar ul li a{
+        font-size: 20px;
+        display: block;
+    }
+    .navbar ul li::after{
+        content: "";
+        width: 0%;
+        height: 4px;
+        background:red;
+        display:block;
+        margin: auto;
+        transition: 0.3s;
+    }
+    .navbar ul li:hover::after{
+        width: 100%;
+    }
+    .nav-media ul{
+        position: fixed;
+        top:90%;
+        left: -100%;
+        background:#2c3e50;
+        height: 100vh;
+        width: 100%;
+        transition: all .5s;
+    }
+    .nav-media ul li{
+        margin: 0 10px 15px 25;
+    }
+    #check:checked ~ .navbar ul{
+        left: 0;
+    } 
+    #check:checked ~ .nav-media ul{
+        left: 0;
+    }
+    #check:checked ~ .checkbtn i:before{
+        content: "\f00d";
+    }
+    .midtext{
+        font-size: 25px;
+        padding: 220 60;
+    }
+    .googlemap{
+        position: relative;
+        margin: 0 0 ;
+    }
+    .endlogo{
+
+        text-align: center;
+    }
+    .text123{
+        font-size: 20px;
+    }
+    .endsocial-menu{
+    
+        padding: 30;
+        margin:2 4;
+    }
+}
